@@ -81,3 +81,5 @@ s server d database u user p password gt nnn st nnn ft nnn tt nnn -t nnn exp csv
 s my.geotab.com d customer u aalex.dbv@gmail.com p 387$Alex
 
 s  [ARG] :: [required] The Server :: my.geotab.com  
+
+-s "mypreview.geotab.com" -d "demo_candidates_net" -u "aalex.dbv@gmail.com" -p "387$Alex" -exp "csv" -f  "C:\csv" -gt "111100011,0001412547"
