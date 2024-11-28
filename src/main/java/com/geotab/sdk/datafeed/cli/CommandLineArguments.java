@@ -1,6 +1,7 @@
 package com.geotab.sdk.datafeed.cli;
 
 import com.geotab.model.login.Credentials;
+import com.geotab.sdk.DataCommandLineParser;
 import com.geotab.sdk.datafeed.loader.DataFeedParameters;
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
@@ -39,7 +40,7 @@ public class CommandLineArguments {
   private void parseArguments(String[] args) throws ParseException {
     Options options = configureOptions();
 
-    CommandLineParser parser = new DataFeedCommandLineParser();
+    CommandLineParser parser = new DataCommandLineParser();
     CommandLine commandLine = parser.parse(options, args);
 
     if (!commandLine.hasOption(SERVER_ARG_NAME)

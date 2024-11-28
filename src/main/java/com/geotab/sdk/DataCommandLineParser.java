@@ -1,4 +1,4 @@
-package com.geotab.sdk.datafeed.cli;
+package com.geotab.sdk;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +10,7 @@ import org.apache.commons.cli.ParseException;
 /**
  * Parser which ignores unknown parameters.
  */
-public class DataFeedCommandLineParser extends DefaultParser {
+public class DataCommandLineParser extends DefaultParser {
 
   @Override
   public CommandLine parse(final Options options, final String[] arguments) throws ParseException {

@@ -74,12 +74,10 @@ tt=[ option: tt  [ARG] :: [optional] The last known trip token :: class java.lan
 et=[ option: et  [ARG] :: [optional] The last known exception token :: class java.lang.String ], 
 exp=[ option: exp  [ARG] :: [optional] The export type: console, csv. Defaults to console. :: class java.lang.String ], 
 f=[ option: f  [ARG] :: [optional] The folder to save any output files to, if applicable. Defaults to the current directory. :: class java.lang.String ], 
-c=[ option: c  [ARG] :: [optional] Run the feed continuously. Defaults to false. :: class java.lang.String ]} ] [ long {} ]
+c=[ option: c  [ARG] :: [optional] Run the feed continuously. Defaults to false. :: class java.lang.String ]} ]
 
 s server d database u user p password gt nnn st nnn ft nnn tt nnn -t nnn exp csv f file path
 
 s my.geotab.com d customer u aalex.dbv@gmail.com p 387$Alex
 
 s  [ARG] :: [required] The Server :: my.geotab.com  
-
--s "mypreview.geotab.com" -d "demo_candidates_net" -u "aalex.dbv@gmail.com" -p "387$Alex" -exp "csv" -f  "C:\csv" -gt "111100011,0001412547"
