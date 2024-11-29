@@ -43,8 +43,7 @@ public class CommandLineArguments {
         || !commandLine.hasOption(USER_ARG_NAME) || !commandLine.hasOption(PASSWORD_ARG_NAME)) {
       String passedParams = String.join(" ", args);
       String cmdLineSyntax = "java -cp sdk-java-samples.jar com.geotab.sdk.datafeed.DataFeedApp"
-          + " --s server --d database --u user --p password --gt nnn --st nnn --ft nnn --tt nnn"
-          + " --et nnn --exp csv --f file path --c";
+          + " --s server --d database --u user --p password --exp csv --f file path --c";
       String header = "\n\tPassed params: " + passedParams + "\n\tArguments may be in any order: ";
       String footer = "";
       HelpFormatter formatter = new HelpFormatter();

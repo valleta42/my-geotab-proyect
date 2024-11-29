@@ -76,7 +76,7 @@ public class CsvExporterVehicles implements Exporter {
           try {
             generateCsv(vin + FILE_NAME, DATA_HEADER, line);
           } catch (Exception e) {
-            log.error("Error accediendo al archivo para añadir la linea");
+            log.error("Error to try add line");
           }
         }
 

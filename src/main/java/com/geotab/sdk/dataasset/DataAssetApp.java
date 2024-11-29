@@ -9,9 +9,9 @@ import org.slf4j.LoggerFactory;
  * This is a console example of obtaining the Assets from the server.
  *
  * <p>1) Process command line arguments: Server, Database, User, Password, File
- * Path and Continuous Feed option.
+ * Path.
  *
- * <p>2) Collect data and export it to console or csv.
+ * <p>2) Collect data and export it to csv file.
  *
  * <p>A complete Geotab API object and method reference is available at the Geotab
  * Developer page.

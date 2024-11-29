@@ -1,18 +1,18 @@
-#Thu Nov 28 21:01:14 GMT+01:00 2024
+#Fri Nov 29 09:56:26 GMT+01:00 2024
 C\:\\git\\my-geotab-proyect\\src\\main\\java\\com\\geotab\\sdk\\CommandLineArguments.java=1731945252696
 C\:\\git\\my-geotab-proyect\\src\\main\\java\\com\\geotab\\sdk\\DataCommandLineParser.java=1732793041309
 C\:\\git\\my-geotab-proyect\\src\\main\\java\\com\\geotab\\sdk\\Util.java=1731916322572
-C\:\\git\\my-geotab-proyect\\src\\main\\java\\com\\geotab\\sdk\\dataasset\\DataAssetApp.java=1732806065497
-C\:\\git\\my-geotab-proyect\\src\\main\\java\\com\\geotab\\sdk\\dataasset\\exporter\\CsvExporterVehicles.java=1732822733004
+C\:\\git\\my-geotab-proyect\\src\\main\\java\\com\\geotab\\sdk\\dataasset\\DataAssetApp.java=1732869673982
+C\:\\git\\my-geotab-proyect\\src\\main\\java\\com\\geotab\\sdk\\dataasset\\exporter\\CsvExporterVehicles.java=1732869753135
 C\:\\git\\my-geotab-proyect\\src\\main\\java\\com\\geotab\\sdk\\dataasset\\exporter\\Exporter.java=1732806327423
 C\:\\git\\my-geotab-proyect\\src\\main\\java\\com\\geotab\\sdk\\dataasset\\loader\\DataAssetLoader.java=1732820792641
 C\:\\git\\my-geotab-proyect\\src\\main\\java\\com\\geotab\\sdk\\dataasset\\loader\\DataAssetParameters.java=1732810902155
 C\:\\git\\my-geotab-proyect\\src\\main\\java\\com\\geotab\\sdk\\dataasset\\loader\\DataAssetResult.java=1732806413344
 C\:\\git\\my-geotab-proyect\\src\\main\\java\\com\\geotab\\sdk\\dataasset\\loader\\DataFeedParameters.java=1732810798521
-C\:\\git\\my-geotab-proyect\\src\\main\\java\\com\\geotab\\sdk\\dataasset\\util\\CommandLineArguments.java=1732813183835
+C\:\\git\\my-geotab-proyect\\src\\main\\java\\com\\geotab\\sdk\\dataasset\\util\\CommandLineArguments.java=1732870163707
 C\:\\git\\my-geotab-proyect\\src\\main\\java\\com\\geotab\\sdk\\dataasset\\util\\FakeVehicleDataCache.java=1732806643017
 C\:\\git\\my-geotab-proyect\\src\\main\\java\\com\\geotab\\sdk\\dataasset\\util\\VehicleData.java=1732806592853
-C\:\\git\\my-geotab-proyect\\src\\main\\java\\com\\geotab\\sdk\\dataasset\\worker\\DataAssetWorker.java=1732813481097
+C\:\\git\\my-geotab-proyect\\src\\main\\java\\com\\geotab\\sdk\\dataasset\\worker\\DataAssetWorker.java=1732870586398
 C\:\\git\\my-geotab-proyect\\src\\main\\java\\com\\geotab\\sdk\\datafeed\\CommandLineArguments.java=1732567602162
 C\:\\git\\my-geotab-proyect\\src\\main\\java\\com\\geotab\\sdk\\datafeed\\DataFeedApp.java=1732791760976
 C\:\\git\\my-geotab-proyect\\src\\main\\java\\com\\geotab\\sdk\\datafeed\\cache\\ControllerCache.java=1732791760979

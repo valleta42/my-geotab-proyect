@@ -6,34 +6,27 @@ files containing the key telematics data sets with updates every few seconds. Fu
 updated and customized when further integration is required for example, pushing the data into a Web service, writing to
 a database, etc..
 
-El metodo data Assets es un ejecutable diseñado para generar un primer volcado de datos de los ultimos 7 dias y 
-posteriormente ir añadiendo los nuevos eventos en una llamada recursiva que se ejecuta cada minuto. He usado para este 
-ejemplo los registros de los statusData pero se podrian extrapolar a todos los demas tipos ya que podriamos usar los métodos 
-LogRecordEntity para recuperar los  datos de coordenadas y el TachographDataFileSearch para recuperar los datos del 
-tacometro (Este ultimo no esta probado)
+Data Assets method is an executable designed to generate an initial dump since the last 7 days and, subsequently, to add 
+the new events in a recursive call which is executed each minute. For this example I used the statusData registers. However, 
+this could be used for any type because we would use the LogRecordEntity to recover the coordinate data and the TachographDataFileSearch 
+to recover the tachograph data (this last statement was not tested yet).
 
-se eligio el StatusData pero se podria haber elegido el LogRecord como trigger de la generación de un nuevo evento ya 
-que con los datos de estos dos obetnemos todos los datos necesarios que se exigen en la prueba.
+The status data was chosen, but the LogRecord could be used as a trigger for the new event generation too due to the fact 
+that with both methods we can retrieve the required data for the test. 
 
-callGet(StatusDataEntity, StatusDataSearch.builder().fromDate(fromDate).toDate(toDate).build());
+- For the first step I used a method from the API named allGet for the StatusDataEntity since the last week, and for each registry we look 
+for the last record through the LogRecordEntity, saving it into a map which acts like a "fake" cache. Using this, we don't need to call the 
+API for each registry, calling it once for each VIN (in this case, the device associated with a specific VIN), recovering it each time we need 
+it without calling the API. In this first step there also is an utility to send the existing files to a folder named "history", adding the date 
+and timestamp to be saved as an execution historic file.
 
-- Para el primer step he usado un método de la api llamado allGet para los StatusDataEntity de la ultima semana y por 
-cada uno de los registros buscamos su ultima traza a traves del LogRecordEntity guardandolo en un map que hace de 'fakecache' 
-para no tener que llamar a la API una por cada registro si no una vez por cada VIN (en este caso device asociado a un VIN) y 
-recuperarlo cada vez que nos haga falta sin llamar a la API. Este primer estep tambien tiene una utilidad para enviar los 
-archivos existentes a una carpeta History añadiendolos una fecha y timestamp para pdoer guardar histórico de las ejecuciones.
+- For the second step, we used the callGetFeed method from StatusData to get advantage from the fromVersion utility, retrieving only the data 
+from the last call. After calling the first step, the second one is called to retrieve the version and to be able to use that version after 1 minute.
 
-- Para el segundo step hemos ultilizado el callGetFeed de los statusData para poder aprovechar la utilidad de fromVersion y solo 
-recuperar los datos desde la ultima llamada. Segun se llama al primer step llamamos al segundo para recuperar una version y poder 
-usar esa versión en la siguiente llamada pasado 1 minuto.
+Improvements:
 
-Puntos de mejora:
-
-- Se podria haber implementado una utilidad que si le pasas un fromVersion de un Status data por linea de comandos  no ejecute el primer step y solo 
-ejecutar el segundo añadiendo los registros desde la ultima version en el mismo archivo.
-
-- Realizar la fakeCache de una forma un poco mas elegante dentro de la utilidad de las caches, pero me aprecio algo enrevesado ya que tendriamos que mezclar
- churras con merinas.
+- A utility could be implemented that, using the fromVersion of a specific Status through the command line, doesn't execute the first step, executing only the second one and adding the registers since the last version of the same file.
+- To implement the "fake" cache in a more elegant way in the caches utility. However, this implementation looked a little bit tricky for me, due to fact that we should mix different utilities and I was not sure if it was very correct or useful.
 
 
 
@@ -69,7 +62,7 @@ The application will bring up the following console:
 Example usage:
 
 ```shell
-java -cp my-geotab-proyect.jar com.geotab.sdk.dataasset.DataAssetApp --s "mypreview.geotab.com" --d "demo_candidates_net" --u "aalex.dbv@gmail.com" --p "387$Alex" --exp "csv" --f  "C:\csv" --c true 60000
+java -cp my-geotab-proyect.jar com.geotab.sdk.dataasset.DataAssetApp --s "mypreview.geotab.com" --d "demo_candidates_net" --u "username" --p "pass" --exp "csv" --f  "C:\csv" --c true 60000
 ```
 
 The options above are the inputs that the feed example can take. A server, database, user and password must be supplied

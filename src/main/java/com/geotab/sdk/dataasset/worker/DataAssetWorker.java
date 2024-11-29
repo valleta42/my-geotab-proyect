@@ -107,7 +107,7 @@ public class DataAssetWorker extends Thread {
 
   private void createHistoricalFiles(String outputPath, String fileName) {
 
-    File historicPath = new File(outputPath + "/historic");
+    File historicPath = new File(outputPath + "/historical");
 
     if (!historicPath.exists()) {
       historicPath.mkdir();
@@ -117,9 +117,9 @@ public class DataAssetWorker extends Thread {
     File newfile = new File(historicPath + "/" + getNameWithoutExtension(fileName) + "-"
         + nowUtcLocalDateTime().format(DateTimeFormatter.ofPattern("yyyy-MM-dd-HH-mm-ss")) + ".csv");
     if (oldfile.renameTo(newfile)) {
-      System.out.println("archivo renombrado");
+      System.out.println("rename an move the file");
     } else {
-      System.out.println("error");
+      System.out.println("error renaming and moving the file");
     }
   }
 
