@@ -31,6 +31,22 @@ In Unix-based systems like Linux or macOS, you would use a colon (`:`) instead o
 
 ## Examples list
 
+### Data Vehicle
+
+An example of retrieving Vehicle data as exporting to a CSV file.
+
+Notas personales 
+
+s=[ option: s  [ARG] :: [required] The Server :: class java.lang.String ], 
+d=[ option: d  [ARG] :: [required] The Database :: class java.lang.String ], 
+u=[ option: u  [ARG] :: [required] The User :: class java.lang.String ], 
+p=[ option: p  [ARG] :: [required] The Password :: class java.lang.String ],  
+exp=[ option: exp  [ARG] :: [required] The export type: console, csv. Defaults to console. :: class java.lang.String ], 
+f=[ option: f  [ARG] :: [required] The folder to save any output files to, if applicable. Defaults to the current directory. :: class java.lang.String ], 
+c=[ option: c  [ARG] :: [required] Run the feed continuously. Defaults to false. :: class java.lang.String ]} ]
+
+s server d database u user p password exp csv f file path
+
 ### Get Logs
 
 An example that obtains the logs for a given vehicle between a range of dates.
@@ -77,7 +93,3 @@ f=[ option: f  [ARG] :: [optional] The folder to save any output files to, if ap
 c=[ option: c  [ARG] :: [optional] Run the feed continuously. Defaults to false. :: class java.lang.String ]} ]
 
 s server d database u user p password gt nnn st nnn ft nnn tt nnn -t nnn exp csv f file path
-
-s my.geotab.com d customer u aalex.dbv@gmail.com p 387$Alex
-
-s  [ARG] :: [required] The Server :: my.geotab.com  
